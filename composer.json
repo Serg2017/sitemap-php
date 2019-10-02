@@ -1,18 +1,14 @@
 {
-    "name": "evert/sitemap-php",
+    "name": "serg/sitemap-php",
     "type": "library",
     "description": "Lightweight library for generating Google sitemap XML files",
     "keywords": ["Sitemap"],
-    "homepage": "https://github.com/evert/sitemap-php/",
+    "homepage": "https://github.com/Serg2017/sitemap-php",
     "license": "MIT",
     "authors": [
         {
-            "name": "Osman Üngür",
-            "email": "osmanungur@gmail.com"
-        },
-        {
-            "name": "Evert Pot",
-            "email": "evert@rooftopsolutions.nl"
+            "name": "Serg",
+            "email": "serg.medved22@gmail.com"
         }
     ],
     "require": {

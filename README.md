@@ -24,7 +24,7 @@ This is a slightly modified version of the original. The Sitemap class is now ad
 Run the following command to include this package via Composer
 
 ```shell
-composer require evert/sitemap-php
+composer require serg/sitemap-php
 ```
 
 **Include**
@@ -41,13 +41,22 @@ Include Sitemap.php file to your PHP document and call Sitemap class with your b
 ```php
    	use SitemapPHP\Sitemap;
 
-	$sitemap = new Sitemap('http://example.com');
+	$sitemap = new Sitemap('http://test.com');
 ```
 
-Now, we need to define path for saving XML files. This can be relative like `xmls` or absolute `/path/to/your/folder` and *must be a writable folder*. In default it uses same folder with your script.
-
+Now, we need to define path for saving XML files. 
 ```php
-	$sitemap->setPath('xmls/');
+	$sitemap->setSitemapPath('xmls/');
+```
+
+Define path for saving sitemap-index.xml 
+```php
+	$sitemap->setIndexPath('xmls/');
+```
+
+Set number of items on sitemap (default 50000)
+```php
+	$sitemap->setNumberOfItems(10000);
 ```
 
 Generated XML file names defaulted to `sitemap-*.xml`, you can customize prefix of filenames with `setFilename` method.
@@ -139,12 +148,3 @@ sitemap-index.xml
 	</sitemapindex>
 	
 You need to submit sitemap-index.xml to Google Sitemaps.
-
-
-### Maintainers
-
-This package is maintained by [Evert Pot](https://github.com/evert), [David Oti](http://github.com/davmixcool), [Osman Ungur](https://github.com/o), [Mike Lay](https://github.com/mkly), [Userlond](https://github.com/userlond), [Philipp Scheit](https://github.com/pscheit), and you!
-
-### License
-
-This package is licensed under the [MIT license](https://github.com/evert/sitemap-php/blob/master/LICENSE).
